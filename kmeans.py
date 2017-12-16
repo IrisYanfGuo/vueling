@@ -1,3 +1,5 @@
+import numpy as np
+from euclidean_distance import *
 # X: data matrix of size (n_samples,n_features)
 # n_clusters: number of clusters
 # output 1: labels of X with size (n_samples,)
