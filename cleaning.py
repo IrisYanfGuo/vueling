@@ -40,3 +40,23 @@ print(length)
 '''
 
 # 3. stemming
+
+
+tweets_stem = []
+eng_stemmer = nltk.stem.snowball.EnglishStemmer(ignore_stopwords=False)
+for i in tweets_del_stword:
+    temp=[]
+    for j in range(len(i)):
+        temp.append(eng_stemmer.stem(i[j]))
+    tweets_stem.append(temp)
+
+# it seems that there exists some problems in this algorithms, such as eng_stemmer.stem(every) -> everi
+for i in range(5):
+    print(tweets_stem[i])
+    print(tweets_del_stword[i])
+
+
+
+
+
+
